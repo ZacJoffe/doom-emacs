@@ -7,10 +7,7 @@
   (setq eglot-sync-connect 1
         eglot-connect-timeout 10
         eglot-autoshutdown t
-        eglot-send-changes-idle-time 0.5
-        ;; NOTE We disable eglot-auto-display-help-buffer because :select t in
-        ;;      its popup rule causes eglot to steal focus too often.
-        eglot-auto-display-help-buffer nil)
+        eglot-send-changes-idle-time 0.5)
   (when (modulep! :checkers syntax)
     (setq eglot-stay-out-of '(flymake)))
 
